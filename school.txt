@@ -1,0 +1,87 @@
+nmap -v -A -sC  school.txt 10.10.10.234
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-08-15 23:41 IST
+NSE: Loaded 153 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 23:41
+Completed NSE at 23:41, 0.00s elapsed
+Initiating NSE at 23:41
+Completed NSE at 23:41, 0.00s elapsed
+Initiating NSE at 23:41
+Completed NSE at 23:41, 0.00s elapsed
+Failed to resolve "school.txt".
+Initiating Ping Scan at 23:41
+Scanning 10.10.10.234 [4 ports]
+Completed Ping Scan at 23:41, 0.28s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 23:41
+Completed Parallel DNS resolution of 1 host. at 23:41, 4.01s elapsed
+Initiating SYN Stealth Scan at 23:41
+Scanning 10.10.10.234 [1000 ports]
+Discovered open port 80/tcp on 10.10.10.234
+Discovered open port 22/tcp on 10.10.10.234
+SYN Stealth Scan Timing: About 33.88% done; ETC: 23:43 (0:01:00 remaining)
+Increasing send delay for 10.10.10.234 from 0 to 5 due to max_successful_tryno increase to 4
+Increasing send delay for 10.10.10.234 from 5 to 10 due to 11 out of 21 dropped probes since last increase.
+SYN Stealth Scan Timing: About 63.55% done; ETC: 23:43 (0:00:35 remaining)
+Increasing send delay for 10.10.10.234 from 10 to 20 due to max_successful_tryno increase to 5
+Completed SYN Stealth Scan at 23:43, 107.56s elapsed (1000 total ports)
+Initiating Service scan at 23:43
+Scanning 2 services on 10.10.10.234
+Completed Service scan at 23:43, 7.59s elapsed (2 services on 1 host)
+Initiating OS detection (try #1) against 10.10.10.234
+Retrying OS detection (try #2) against 10.10.10.234
+Retrying OS detection (try #3) against 10.10.10.234
+Retrying OS detection (try #4) against 10.10.10.234
+adjust_timeouts2: packet supposedly had rtt of -399446 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -399446 microseconds.  Ignoring time.
+Retrying OS detection (try #5) against 10.10.10.234
+Initiating Traceroute at 23:44
+Completed Traceroute at 23:44, 0.28s elapsed
+Initiating Parallel DNS resolution of 2 hosts. at 23:44
+Completed Parallel DNS resolution of 2 hosts. at 23:44, 8.01s elapsed
+NSE: Script scanning 10.10.10.234.
+Initiating NSE at 23:44
+Completed NSE at 23:44, 14.69s elapsed
+Initiating NSE at 23:44
+Completed NSE at 23:44, 2.25s elapsed
+Initiating NSE at 23:44
+Completed NSE at 23:44, 0.00s elapsed
+Nmap scan report for 10.10.10.234
+Host is up (0.21s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.9 (FreeBSD 20200214; protocol 2.0)
+| ssh-hostkey: 
+|   2048 1d:69:83:78:fc:91:f8:19:c8:75:a7:1e:76:45:05:dc (RSA)
+|   256 e9:b2:d2:23:9d:cf:0e:63:e0:6d:b9:b1:a6:86:93:38 (ECDSA)
+|_  256 7f:51:88:f7:3c:dd:77:5e:ba:25:4d:4c:09:25:ea:1f (ED25519)
+80/tcp open  http    Apache httpd 2.4.46 ((FreeBSD) PHP/7.4.15)
+|_http-favicon: Unknown favicon MD5: 460AF0375ECB7C08C3AE0B6E0B82D717
+| http-methods: 
+|   Supported Methods: GET POST OPTIONS HEAD TRACE
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.4.46 (FreeBSD) PHP/7.4.15
+|_http-title: Schooled - A new kind of educational institute
+Aggressive OS guesses: FreeBSD 12.0-RELEASE - 13.0-CURRENT (95%), FreeBSD 11.0-RELEASE - 12.0-CURRENT (93%), FreeBSD 11.1-RELEASE or 11.2-STABLE (93%), FreeBSD 11.2-RELEASE - 11.3 RELEASE or 11.2-STABLE (93%), FreeBSD 11.3-RELEASE (93%), FreeBSD 12.0-RELEASE - 12.1-RELEASE or 12.0-STABLE (92%), FreeBSD 11.1-STABLE (92%), FreeBSD 11.0-STABLE (89%), FreeBSD 11.0-CURRENT (89%), FreeBSD 11.1-RELEASE (89%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 0.000 days (since Sun Aug 15 23:44:13 2021)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=256 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: FreeBSD; CPE: cpe:/o:freebsd:freebsd
+
+TRACEROUTE (using port 23/tcp)
+HOP RTT       ADDRESS
+1   271.59 ms 10.10.14.1
+2   271.60 ms 10.10.10.234
+
+NSE: Script Post-scanning.
+Initiating NSE at 23:44
+Completed NSE at 23:44, 0.00s elapsed
+Initiating NSE at 23:44
+Completed NSE at 23:44, 0.00s elapsed
+Initiating NSE at 23:44
+Completed NSE at 23:44, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 171.65 seconds
+           Raw packets sent: 1524 (73.240KB) | Rcvd: 2228 (308.508KB)
